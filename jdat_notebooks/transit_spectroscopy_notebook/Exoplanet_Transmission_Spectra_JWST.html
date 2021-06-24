@@ -15,7 +15,7 @@
 <meta name="keywords" content="['stsci', 'spacetelescope', 'jupyter', 'notebooks', 'astronomy']" />
 <meta name="author" content="Spacetelescope" />
 <meta name="maintainer" content="Michael Gough" />
-<meta name="modified" content="2021-06-24 05:38:57.430886" />
+<meta name="modified" content="2021-06-24 06:34:17.552890" />
 
 <!-- Google SEO -->
 <!-- Details: https://support.google.com/webmasters/answer/79812?hl=en -->
@@ -17244,6 +17244,8 @@ Transit depth measured error (ppm) :  46.362342284252584
   sigrednoise=np.sqrt(sig_binned**2-sig0**2/binmeasure)
 &lt;ipython-input-21-1eaca8c280ab&gt;:147: RuntimeWarning: invalid value encountered in sqrt
   sigrednoise=np.sqrt(sig_binned**2-sigwhite**2/binmeasure)
+&lt;ipython-input-21-1eaca8c280ab&gt;:209: UserWarning: constrained_layout not applied.  At least one axes collapsed to zero width or height.
+  plt.savefig(pp,format='pdf')
 </pre>
 </div>
 </div>
@@ -17335,9 +17337,7 @@ Transit depth measured error (ppm) :  67.31899104912684
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-21-1eaca8c280ab&gt;:209: UserWarning: constrained_layout not applied.  At least one axes collapsed to zero width or height.
-  plt.savefig(pp,format='pdf')
-&lt;ipython-input-21-1eaca8c280ab&gt;:144: RuntimeWarning: invalid value encountered in sqrt
+<pre>&lt;ipython-input-21-1eaca8c280ab&gt;:144: RuntimeWarning: invalid value encountered in sqrt
   sigrednoise=np.sqrt(sig_binned**2-sig0**2/binmeasure)
 &lt;ipython-input-21-1eaca8c280ab&gt;:147: RuntimeWarning: invalid value encountered in sqrt
   sigrednoise=np.sqrt(sig_binned**2-sigwhite**2/binmeasure)
