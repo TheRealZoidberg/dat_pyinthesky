@@ -13,5 +13,7 @@ git clone https://github.com/spacetelescope/nbcollection nbcollection
 cd nbcollection
 pip install -U pip setuptools
 pip install -r ci_requirements.txt
+pip install pytest
+pip install nbval
 python setup.py install
 cd -
