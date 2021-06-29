@@ -20,7 +20,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / aperture_photometry
+        command: python -m pytest --nbval jdat_notebooks/aperture_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Asdf Example:
     executor: nbcollection-builder
@@ -37,7 +37,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / asdf_example
+        command: python -m pytest --nbval jdat_notebooks/asdf_example
         name: Notebook Validation Tests
   Jdat Notebooks-Background Estimation Imaging:
     executor: nbcollection-builder
@@ -54,7 +54,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / background_estimation_imaging
+        command: python -m pytest --nbval jdat_notebooks/background_estimation_imaging
         name: Notebook Validation Tests
   Jdat Notebooks-Cube Fitting:
     executor: nbcollection-builder
@@ -71,7 +71,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / cube_fitting
+        command: python -m pytest --nbval jdat_notebooks/cube_fitting
         name: Notebook Validation Tests
   Jdat Notebooks-Ifu Cube Continuum Fit:
     executor: nbcollection-builder
@@ -88,7 +88,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / IFU_cube_continuum_fit
+        command: python -m pytest --nbval jdat_notebooks/IFU_cube_continuum_fit
         name: Notebook Validation Tests
   Jdat Notebooks-Ifu Optimal:
     executor: nbcollection-builder
@@ -105,7 +105,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / ifu_optimal
+        command: python -m pytest --nbval jdat_notebooks/ifu_optimal
         name: Notebook Validation Tests
   Jdat Notebooks-Miri Ifu Ysos In The Lmc:
     executor: nbcollection-builder
@@ -122,7 +122,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / MIRI_IFU_YSOs_in_the_LMC
+        command: python -m pytest --nbval jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC
         name: Notebook Validation Tests
   Jdat Notebooks-Miri Lrs Spectral Extraction:
     executor: nbcollection-builder
@@ -139,7 +139,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / MIRI_LRS_spectral_extraction
+        command: python -m pytest --nbval jdat_notebooks/MIRI_LRS_spectral_extraction
         name: Notebook Validation Tests
   Jdat Notebooks-Mos-Spectroscopy:
     executor: nbcollection-builder
@@ -156,7 +156,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / mos-spectroscopy
+        command: python -m pytest --nbval jdat_notebooks/mos-spectroscopy
         name: Notebook Validation Tests
   Jdat Notebooks-Mrs Mstar Analysis:
     executor: nbcollection-builder
@@ -173,7 +173,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / MRS_Mstar_analysis
+        command: python -m pytest --nbval jdat_notebooks/MRS_Mstar_analysis
         name: Notebook Validation Tests
   Jdat Notebooks-Nircam Photometry:
     executor: nbcollection-builder
@@ -190,7 +190,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / NIRCam_photometry
+        command: python -m pytest --nbval jdat_notebooks/NIRCam_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Nircam Psf-Matched Photometry:
     executor: nbcollection-builder
@@ -207,7 +207,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / NIRCam_PSF-matched_photometry
+        command: python -m pytest --nbval jdat_notebooks/NIRCam_PSF-matched_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Niriss Wfss Postpipeline:
     executor: nbcollection-builder
@@ -224,7 +224,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / NIRISS_WFSS_postpipeline
+        command: python -m pytest --nbval jdat_notebooks/NIRISS_WFSS_postpipeline
         name: Notebook Validation Tests
   Jdat Notebooks-Nirspec Mast Query:
     executor: nbcollection-builder
@@ -241,7 +241,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / NIRSpec_MAST_Query
+        command: python -m pytest --nbval jdat_notebooks/NIRSpec_MAST_Query
         name: Notebook Validation Tests
   Jdat Notebooks-Optimal Extraction:
     executor: nbcollection-builder
@@ -258,7 +258,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / optimal_extraction
+        command: python -m pytest --nbval jdat_notebooks/optimal_extraction
         name: Notebook Validation Tests
   Jdat Notebooks-Psf Photometry:
     executor: nbcollection-builder
@@ -275,7 +275,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / psf_photometry
+        command: python -m pytest --nbval jdat_notebooks/psf_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Specviz Notebookgui Interaction:
     executor: nbcollection-builder
@@ -292,7 +292,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / specviz_notebookGUI_interaction
+        command: python -m pytest --nbval jdat_notebooks/specviz_notebookGUI_interaction
         name: Notebook Validation Tests
   Jdat Notebooks-Transit Spectroscopy Notebook:
     executor: nbcollection-builder
@@ -309,7 +309,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: python -m pytest --nbval /tmp/jdat_notebooks / transit_spectroscopy_notebook
+        command: python -m pytest --nbval jdat_notebooks/transit_spectroscopy_notebook
         name: Notebook Validation Tests
   Publish Website:
     executor: nbcollection-builder
