@@ -38,9 +38,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/asdf_example/pre-requirements.txt ;
-          pip install -r jdat_notebooks/asdf_example/requirements.txt ; python -m
-          pytest --nbval  jdat_notebooks/asdf_example
+        command: pip install -r jdat_notebooks/asdf_example/requirements.txt ; python
+          -m pytest --nbval  jdat_notebooks/asdf_example
         name: Notebook Validation Tests
   Jdat Notebooks-Background Estimation Imaging:
     executor: nbcollection-builder
@@ -57,8 +56,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/background_estimation_imaging/pre-requirements.txt
-          ; pip install -r jdat_notebooks/background_estimation_imaging/requirements.txt
+        command: pip install -r jdat_notebooks/background_estimation_imaging/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/background_estimation_imaging
         name: Notebook Validation Tests
   Jdat Notebooks-Cube Fitting:
@@ -94,8 +92,9 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/IFU_cube_continuum_fit/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/IFU_cube_continuum_fit
+        command: ./jdat_notebooks/IFU_cube_continuum_fit/pre-install.sh ; pip install
+          -r jdat_notebooks/IFU_cube_continuum_fit/requirements.txt ; python -m pytest
+          --nbval  jdat_notebooks/IFU_cube_continuum_fit
         name: Notebook Validation Tests
   Jdat Notebooks-Ifu Optimal:
     executor: nbcollection-builder
@@ -112,9 +111,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/ifu_optimal/pre-requirements.txt ;
-          pip install -r jdat_notebooks/ifu_optimal/requirements.txt ; python -m pytest
-          --nbval  jdat_notebooks/ifu_optimal
+        command: pip install -r jdat_notebooks/ifu_optimal/requirements.txt ; python
+          -m pytest --nbval  jdat_notebooks/ifu_optimal
         name: Notebook Validation Tests
   Jdat Notebooks-Miri Ifu Ysos In The Lmc:
     executor: nbcollection-builder
@@ -131,9 +129,9 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/pre-requirements.txt
-          ; pip install -r jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC
+        command: ./jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/pre-install.sh ; pip install
+          -r jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/requirements.txt ; python -m
+          pytest --nbval  jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC
         name: Notebook Validation Tests
   Jdat Notebooks-Miri Lrs Spectral Extraction:
     executor: nbcollection-builder
@@ -186,9 +184,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/MRS_Mstar_analysis/pre-requirements.txt
-          ; pip install -r jdat_notebooks/MRS_Mstar_analysis/requirements.txt ; python
-          -m pytest --nbval  jdat_notebooks/MRS_Mstar_analysis
+        command: pip install -r jdat_notebooks/MRS_Mstar_analysis/requirements.txt
+          ; python -m pytest --nbval  jdat_notebooks/MRS_Mstar_analysis
         name: Notebook Validation Tests
   Jdat Notebooks-Nircam Photometry:
     executor: nbcollection-builder
@@ -205,8 +202,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/NIRCam_photometry/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/NIRCam_photometry
+        command: ./jdat_notebooks/NIRCam_photometry/pre-install.sh ; pip install -r
+          jdat_notebooks/NIRCam_photometry/requirements.txt ; python -m pytest --nbval  jdat_notebooks/NIRCam_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Nircam Psf-Matched Photometry:
     executor: nbcollection-builder
@@ -277,8 +274,9 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/optimal_extraction/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/optimal_extraction
+        command: ./jdat_notebooks/optimal_extraction/pre-install.sh ; pip install
+          -r jdat_notebooks/optimal_extraction/requirements.txt ; python -m pytest
+          --nbval  jdat_notebooks/optimal_extraction
         name: Notebook Validation Tests
   Jdat Notebooks-Psf Photometry:
     executor: nbcollection-builder
@@ -295,8 +293,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/psf_photometry/requirements.txt ; python
-          -m pytest --nbval  jdat_notebooks/psf_photometry
+        command: ./jdat_notebooks/psf_photometry/pre-install.sh ; pip install -r jdat_notebooks/psf_photometry/requirements.txt
+          ; python -m pytest --nbval  jdat_notebooks/psf_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Specviz Notebookgui Interaction:
     executor: nbcollection-builder
@@ -313,7 +311,8 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install -r jdat_notebooks/specviz_notebookGUI_interaction/requirements.txt
+        command: ./jdat_notebooks/specviz_notebookGUI_interaction/pre-install.sh ;
+          pip install -r jdat_notebooks/specviz_notebookGUI_interaction/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/specviz_notebookGUI_interaction
         name: Notebook Validation Tests
   Jdat Notebooks-Transit Spectroscopy Notebook:
