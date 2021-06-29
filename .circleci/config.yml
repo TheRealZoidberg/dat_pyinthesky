@@ -19,7 +19,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -37,7 +36,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -55,7 +53,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -73,7 +70,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -91,7 +87,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -109,7 +104,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -127,7 +121,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -145,7 +138,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -163,7 +155,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -181,7 +172,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -199,7 +189,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -217,7 +206,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -235,7 +223,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -253,7 +240,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -271,7 +257,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -289,7 +274,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -307,7 +291,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
@@ -325,7 +308,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - validation
     - run:
         command: python -m pytest --nbval
         name: Notebook Validation Tests
