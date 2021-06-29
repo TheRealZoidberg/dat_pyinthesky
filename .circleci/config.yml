@@ -20,7 +20,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/aperture_photometry/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/aperture_photometry/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/aperture_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Asdf Example:
@@ -38,7 +38,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/asdf_example/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/asdf_example/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/asdf_example
         name: Notebook Validation Tests
   Jdat Notebooks-Background Estimation Imaging:
@@ -56,7 +56,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/background_estimation_imaging/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/background_estimation_imaging/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/background_estimation_imaging
         name: Notebook Validation Tests
   Jdat Notebooks-Cube Fitting:
@@ -74,7 +74,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/cube_fitting/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/cube_fitting/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/cube_fitting
         name: Notebook Validation Tests
   Jdat Notebooks-Ifu Cube Continuum Fit:
@@ -92,7 +92,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/IFU_cube_continuum_fit/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/IFU_cube_continuum_fit/pre-install.sh
           ; pip install -r jdat_notebooks/IFU_cube_continuum_fit/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/IFU_cube_continuum_fit
         name: Notebook Validation Tests
@@ -111,7 +111,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/ifu_optimal/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/ifu_optimal/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/ifu_optimal
         name: Notebook Validation Tests
   Jdat Notebooks-Miri Ifu Ysos In The Lmc:
@@ -129,7 +129,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/pre-install.sh
           ; pip install -r jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC
         name: Notebook Validation Tests
@@ -148,7 +148,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/MIRI_LRS_spectral_extraction/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/MIRI_LRS_spectral_extraction/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/MIRI_LRS_spectral_extraction
         name: Notebook Validation Tests
   Jdat Notebooks-Mos-Spectroscopy:
@@ -166,7 +166,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/mos-spectroscopy/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/mos-spectroscopy/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/mos-spectroscopy
         name: Notebook Validation Tests
   Jdat Notebooks-Mrs Mstar Analysis:
@@ -184,7 +184,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/MRS_Mstar_analysis/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/MRS_Mstar_analysis/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/MRS_Mstar_analysis
         name: Notebook Validation Tests
   Jdat Notebooks-Nircam Photometry:
@@ -202,7 +202,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/NIRCam_photometry/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/NIRCam_photometry/pre-install.sh
           ; pip install -r jdat_notebooks/NIRCam_photometry/requirements.txt ; python
           -m pytest --nbval  jdat_notebooks/NIRCam_photometry
         name: Notebook Validation Tests
@@ -221,7 +221,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/NIRCam_PSF-matched_photometry/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRCam_PSF-matched_photometry/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/NIRCam_PSF-matched_photometry
         name: Notebook Validation Tests
   Jdat Notebooks-Niriss Wfss Postpipeline:
@@ -239,7 +239,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/NIRISS_WFSS_postpipeline/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRISS_WFSS_postpipeline/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/NIRISS_WFSS_postpipeline
         name: Notebook Validation Tests
   Jdat Notebooks-Nirspec Mast Query:
@@ -257,7 +257,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/NIRSpec_MAST_Query/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRSpec_MAST_Query/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/NIRSpec_MAST_Query
         name: Notebook Validation Tests
   Jdat Notebooks-Optimal Extraction:
@@ -275,7 +275,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/optimal_extraction/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/optimal_extraction/pre-install.sh
           ; pip install -r jdat_notebooks/optimal_extraction/requirements.txt ; python
           -m pytest --nbval  jdat_notebooks/optimal_extraction
         name: Notebook Validation Tests
@@ -294,7 +294,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/psf_photometry/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/psf_photometry/pre-install.sh
           ; pip install -r jdat_notebooks/psf_photometry/requirements.txt ; python
           -m pytest --nbval  jdat_notebooks/psf_photometry
         name: Notebook Validation Tests
@@ -313,7 +313,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval jdat_notebooks/specviz_notebookGUI_interaction/pre-install.sh
+        command: pip install pytest ; pip install nbval ; jdat_notebooks/specviz_notebookGUI_interaction/pre-install.sh
           ; pip install -r jdat_notebooks/specviz_notebookGUI_interaction/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/specviz_notebookGUI_interaction
         name: Notebook Validation Tests
@@ -332,7 +332,7 @@ jobs:
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
     - run:
-        command: pip install pytest pip install nbval pip install -r jdat_notebooks/transit_spectroscopy_notebook/requirements.txt
+        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/transit_spectroscopy_notebook/requirements.txt
           ; python -m pytest --nbval  jdat_notebooks/transit_spectroscopy_notebook
         name: Notebook Validation Tests
   Publish Website:
