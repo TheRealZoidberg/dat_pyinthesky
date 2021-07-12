@@ -19,10 +19,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/aperture_photometry/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/aperture_photometry
-        name: Notebook Validation Tests
   Jdat Notebooks-Asdf Example:
     executor: nbcollection-builder
     steps:
@@ -37,10 +33,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/asdf_example/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/asdf_example
-        name: Notebook Validation Tests
   Jdat Notebooks-Background Estimation Imaging:
     executor: nbcollection-builder
     steps:
@@ -55,10 +47,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/background_estimation_imaging/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/background_estimation_imaging
-        name: Notebook Validation Tests
   Jdat Notebooks-Cube Fitting:
     executor: nbcollection-builder
     steps:
@@ -73,10 +61,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/cube_fitting/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/cube_fitting
-        name: Notebook Validation Tests
   Jdat Notebooks-Ifu Cube Continuum Fit:
     executor: nbcollection-builder
     steps:
@@ -91,11 +75,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/IFU_cube_continuum_fit/pre-install.sh
-          ; pip install -r jdat_notebooks/IFU_cube_continuum_fit/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/IFU_cube_continuum_fit
-        name: Notebook Validation Tests
   Jdat Notebooks-Ifu Optimal:
     executor: nbcollection-builder
     steps:
@@ -110,10 +89,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/ifu_optimal/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/ifu_optimal
-        name: Notebook Validation Tests
   Jdat Notebooks-Miri Ifu Ysos In The Lmc:
     executor: nbcollection-builder
     steps:
@@ -128,11 +103,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/pre-install.sh
-          ; pip install -r jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/MIRI_IFU_YSOs_in_the_LMC
-        name: Notebook Validation Tests
   Jdat Notebooks-Miri Lrs Spectral Extraction:
     executor: nbcollection-builder
     steps:
@@ -147,10 +117,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/MIRI_LRS_spectral_extraction/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/MIRI_LRS_spectral_extraction
-        name: Notebook Validation Tests
   Jdat Notebooks-Mos-Spectroscopy:
     executor: nbcollection-builder
     steps:
@@ -165,10 +131,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/mos-spectroscopy/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/mos-spectroscopy
-        name: Notebook Validation Tests
   Jdat Notebooks-Mrs Mstar Analysis:
     executor: nbcollection-builder
     steps:
@@ -183,10 +145,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/MRS_Mstar_analysis/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/MRS_Mstar_analysis
-        name: Notebook Validation Tests
   Jdat Notebooks-Nircam Photometry:
     executor: nbcollection-builder
     steps:
@@ -201,11 +159,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/NIRCam_photometry/pre-install.sh
-          ; pip install -r jdat_notebooks/NIRCam_photometry/requirements.txt ; python
-          -m pytest --nbval  jdat_notebooks/NIRCam_photometry
-        name: Notebook Validation Tests
   Jdat Notebooks-Nircam Psf-Matched Photometry:
     executor: nbcollection-builder
     steps:
@@ -220,10 +173,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRCam_PSF-matched_photometry/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/NIRCam_PSF-matched_photometry
-        name: Notebook Validation Tests
   Jdat Notebooks-Niriss Wfss Postpipeline:
     executor: nbcollection-builder
     steps:
@@ -238,10 +187,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRISS_WFSS_postpipeline/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/NIRISS_WFSS_postpipeline
-        name: Notebook Validation Tests
   Jdat Notebooks-Nirspec Mast Query:
     executor: nbcollection-builder
     steps:
@@ -256,10 +201,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/NIRSpec_MAST_Query/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/NIRSpec_MAST_Query
-        name: Notebook Validation Tests
   Jdat Notebooks-Optimal Extraction:
     executor: nbcollection-builder
     steps:
@@ -274,11 +215,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/optimal_extraction/pre-install.sh
-          ; pip install -r jdat_notebooks/optimal_extraction/requirements.txt ; python
-          -m pytest --nbval  jdat_notebooks/optimal_extraction
-        name: Notebook Validation Tests
   Jdat Notebooks-Psf Photometry:
     executor: nbcollection-builder
     steps:
@@ -293,11 +229,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/psf_photometry/pre-install.sh
-          ; pip install -r jdat_notebooks/psf_photometry/requirements.txt ; python
-          -m pytest --nbval  jdat_notebooks/psf_photometry
-        name: Notebook Validation Tests
   Jdat Notebooks-Specviz Notebookgui Interaction:
     executor: nbcollection-builder
     steps:
@@ -312,11 +243,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; sh jdat_notebooks/specviz_notebookGUI_interaction/pre-install.sh
-          ; pip install -r jdat_notebooks/specviz_notebookGUI_interaction/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/specviz_notebookGUI_interaction
-        name: Notebook Validation Tests
   Jdat Notebooks-Transit Spectroscopy Notebook:
     executor: nbcollection-builder
     steps:
@@ -331,10 +257,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-    - run:
-        command: pip install pytest ; pip install nbval ; pip install -r jdat_notebooks/transit_spectroscopy_notebook/requirements.txt
-          ; python -m pytest --nbval  jdat_notebooks/transit_spectroscopy_notebook
-        name: Notebook Validation Tests
   Publish Website:
     executor: nbcollection-builder
     steps:
