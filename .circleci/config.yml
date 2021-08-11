@@ -1,7 +1,11 @@
 executors:
   nbcollection-builder:
     docker:
+<<<<<<< HEAD
         - image: continuumio/miniconda3:latest
+=======
+    - image: continuumio/miniconda3:3.4.8
+>>>>>>> parent of ef0a048... Update
     resource_class: medium
     working_directory: ~/repo
 jobs:
