@@ -3,5 +3,10 @@ astropy
 matplotlib
 scipy
 ipywidgets
+<<<<<<< HEAD
 git+git://github.com/spacetelescope/jwst@0.17.0#egg=jwst
 webbpsf
+=======
+git+https://github.com/spacetelescope/jwst@0.17.0#egg=jwst
+webbpsf
+>>>>>>> 972fece... Restoring notebooks
