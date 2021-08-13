@@ -3,6 +3,6 @@ photutils>=1.0.1
 numpy>=1.19.4
 matplotlib>=3.3.3
 mplcursors
-scipy
+scipy>=1.1.3
 scikit-image
 PyYAML
