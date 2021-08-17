@@ -1,5 +1,5 @@
-astropy
-matplotlib==3.1.1
-asdf==2.5.2
+astropy>=4.1
+matplotlib>=3.2
+asdf>=2.7.1
 gwcs>=0.11.0
-astrocut
+astrocut==0.5
