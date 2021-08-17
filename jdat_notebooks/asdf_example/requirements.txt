@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 astropy>=4.0.1.post1
 matplotlib>=3.1.1
+=======
+astropy>=4.1
+matplotlib>=3.2
+>>>>>>> c9aacf5... Updates to reqs
 asdf>=2.7.1
 gwcs>=0.11.0
-astrocut
+astrocut==0.5
