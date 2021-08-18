@@ -3,5 +3,3 @@ jdat_notebooks:composite_model_fitting
 jdat_notebooks:example_notebook
 jdat_notebooks:soss-transit-spectroscopy
 jdat_notebooks:niriss_ami_binary
-jdat_notebooks.transit_spectroscopy_notebook
-jdat_notebooks.psf_photometry
