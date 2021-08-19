@@ -14,13 +14,4 @@ if [ ! -f "$filepath" ]; then
     tar -xf $filename
     cd -
 fi
-
-
-if [ ! -f "grp" ]; then
-
-    curl -OL http://ssb.stsci.edu/trds/tarfiles/synphot5.tar.gz
-    tar -xf synphot5.tar.gz
-
-fi
-
 exit 0
