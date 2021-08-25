@@ -11,7 +11,7 @@ apt-get install -y git make build-essential libssl-dev zlib1g-dev libbz2-dev lib
 
 git clone https://github.com/therealzoidberg/nbcollection nbcollection
 cd nbcollection
-pip install -U pip setuptools>=56.0.0
+pip install -U pip setuptools
 pip install -r ci_requirements.txt
 python setup.py install
 cd -
