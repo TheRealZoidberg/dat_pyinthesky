@@ -1,7 +1,7 @@
 executors:
   nbcollection-builder:
     docker:
-        - image: continuumio/miniconda3:latest
+    - image: continuumio/miniconda3:latest
     resource_class: medium
     working_directory: ~/repo
 jobs:
@@ -19,6 +19,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Asdf Example:
     executor: nbcollection-builder
     steps:
@@ -33,6 +36,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Background Estimation Imaging:
     executor: nbcollection-builder
     steps:
@@ -47,6 +53,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Cube Fitting:
     executor: nbcollection-builder
     steps:
@@ -61,6 +70,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Ifu Cube Continuum Fit:
     executor: nbcollection-builder
     steps:
@@ -75,6 +87,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Ifu Optimal:
     executor: nbcollection-builder
     steps:
@@ -89,6 +104,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Miri Ifu Ysos In The Lmc:
     executor: nbcollection-builder
     steps:
@@ -103,6 +121,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Miri Lrs Spectral Extraction:
     executor: nbcollection-builder
     steps:
@@ -117,6 +138,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Mos-Spectroscopy:
     executor: nbcollection-builder
     steps:
@@ -131,6 +155,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Mrs Mstar Analysis:
     executor: nbcollection-builder
     steps:
@@ -145,6 +172,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Nircam Photometry:
     executor: nbcollection-builder
     steps:
@@ -159,6 +189,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Nircam Psf-Matched Photometry:
     executor: nbcollection-builder
     steps:
@@ -173,6 +206,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Niriss Wfss Postpipeline:
     executor: nbcollection-builder
     steps:
@@ -187,6 +223,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Nirspec Mast Query:
     executor: nbcollection-builder
     steps:
@@ -201,6 +240,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Optimal Extraction:
     executor: nbcollection-builder
     steps:
@@ -215,6 +257,26 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
+  Jdat Notebooks-Optimal Extraction Dynamic:
+    executor: nbcollection-builder
+    steps:
+    - checkout
+    - run:
+        command: bash ./.circleci/setup-env.sh
+        name: Setup Environment
+    - run:
+        command: nbcollection-ci build-notebooks --collection-names jdat_notebooks
+          --category-names optimal_extraction_dynamic
+        name: Build Jdat Notebooks-Optimal Extraction Dynamic notebooks
+        no_output_timeout: 120m
+    - store_artifacts:
+        path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Psf Photometry:
     executor: nbcollection-builder
     steps:
@@ -229,6 +291,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Specviz Notebookgui Interaction:
     executor: nbcollection-builder
     steps:
@@ -243,6 +308,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Jdat Notebooks-Transit Spectroscopy Notebook:
     executor: nbcollection-builder
     steps:
@@ -257,6 +325,9 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+    - run:
+        command: python -m pytest --nbval
+        name: Notebook Validation Tests
   Publish Website:
     executor: nbcollection-builder
     steps:
@@ -310,6 +381,7 @@ workflows:
     - Jdat Notebooks-Miri Lrs Spectral Extraction
     - Jdat Notebooks-Transit Spectroscopy Notebook
     - Jdat Notebooks-Nircam Photometry
+    - Jdat Notebooks-Optimal Extraction Dynamic
     - Pull Request
     - Publish Website:
         requires:
@@ -331,4 +403,5 @@ workflows:
         - Jdat Notebooks-Miri Lrs Spectral Extraction
         - Jdat Notebooks-Transit Spectroscopy Notebook
         - Jdat Notebooks-Nircam Photometry
+        - Jdat Notebooks-Optimal Extraction Dynamic
   version: '2.1'
