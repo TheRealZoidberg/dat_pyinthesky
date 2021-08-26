@@ -14,4 +14,5 @@ cd nbcollection
 pip install -U pip setuptools
 pip install -r ci_requirements.txt
 python setup.py install
+pip freeze
 cd -
