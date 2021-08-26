@@ -1,7 +1,7 @@
 executors:
   nbcollection-builder:
     docker:
-    - image: continuumio/miniconda3:4.8.2
+    - image: continuumio/miniconda3:4.3.27
     resource_class: medium
     working_directory: ~/repo
 jobs:
