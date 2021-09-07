@@ -3,3 +3,4 @@ IPython-*
 *.pyc
 exec*.ipynb
 *.html
+!index.html
