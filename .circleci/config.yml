@@ -19,20 +19,6 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
-  Jdat Notebooks-Asdf Example:
-    executor: nbcollection-builder
-    steps:
-    - checkout
-    - run:
-        command: bash ./.circleci/setup-env.sh
-        name: Setup Environment
-    - run:
-        command: nbcollection-ci build-notebooks --collection-names jdat_notebooks
-          --category-names asdf_example
-        name: Build Jdat Notebooks-Asdf Example notebooks
-        no_output_timeout: 120m
-    - store_artifacts:
-        path: /tmp/nbcollection-ci-artifacts
   Jdat Notebooks-Background Estimation Imaging:
     executor: nbcollection-builder
     steps:
@@ -318,7 +304,6 @@ workflows:
     - Jdat Notebooks-Background Estimation Imaging
     - Jdat Notebooks-Psf Photometry
     - Jdat Notebooks-Specviz Notebookgui Interaction
-    - Jdat Notebooks-Asdf Example
     - Jdat Notebooks-Aperture Photometry
     - Jdat Notebooks-Nirspec Mast Query
     - Jdat Notebooks-Miri Lrs Spectral Extraction
@@ -340,7 +325,6 @@ workflows:
         - Jdat Notebooks-Background Estimation Imaging
         - Jdat Notebooks-Psf Photometry
         - Jdat Notebooks-Specviz Notebookgui Interaction
-        - Jdat Notebooks-Asdf Example
         - Jdat Notebooks-Aperture Photometry
         - Jdat Notebooks-Nirspec Mast Query
         - Jdat Notebooks-Miri Lrs Spectral Extraction
