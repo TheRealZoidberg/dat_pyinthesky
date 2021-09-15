@@ -19,6 +19,24 @@ jobs:
         no_output_timeout: 120m
     - store_artifacts:
         path: /tmp/nbcollection-ci-artifacts
+  Publish Website:
+    executor: nbcollection-builder
+    steps:
+    - checkout
+    - run:
+        command: bash ./.circleci/setup-env.sh
+        name: Setup Environment
+        no_output_timeout: 120m
+    - run:
+        command: nbcollection-ci merge-artifacts -c jdat_notebooks -o $CIRCLE_PROJECT_USERNAME
+          -r $CIRCLE_PROJECT_REPONAME
+        name: Publish Website
+        no_output_timeout: 120m
+    - add_ssh_keys
+    - run:
+        command: nbcollection-ci site-deployment -r origin -b gh-pages
+        name: Deploy Website
+        no_output_timeout: 120m
   Pull Request:
     executor: nbcollection-builder
     steps:
@@ -38,4 +56,7 @@ workflows:
     jobs:
     - Jdat Notebooks-Asdf Example
     - Pull Request
+    - Publish Website:
+        requires:
+        - Jdat Notebooks-Asdf Example
   version: '2.1'
