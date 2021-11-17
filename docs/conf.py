@@ -17,7 +17,7 @@ import os
 from configparser import ConfigParser
 from pkg_resources import get_distribution
 
-import stsci_rtd_theme
+#import stsci_rtd_theme
 
 
 def setup(app):
